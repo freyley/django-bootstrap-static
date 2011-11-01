@@ -7,7 +7,7 @@ long_description = (open('README.rst').read() +
                     open('TODO.rst').read())
 
 setup(
-    name='django-boostrap-static',
+    name='django-bootstrap-static',
     version='0.0.1',
     description='Boostrap django projects with twitter-bootstrap, requirejs, resig microtemplating, etc',
     author='LoFi Art',
@@ -26,10 +26,11 @@ setup(
     ],
     zip_safe=False,
     #test_suite='tests.runtests.runtests',
+    package_dir = { 'bootstrap_static' : 'bootstrap_static' },
     package_data={
-        'boostrap_static': [
-            'static/js/*.js',
+        'bootstrap_static': [
             'static/css/*.css',
+            'static/js/*.js',
             '__init__.py',
         ]
     },
